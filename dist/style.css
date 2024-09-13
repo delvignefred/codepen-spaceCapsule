@@ -1,312 +1,312 @@
 :root {
-    /** color system **/
-    --system-color-dark: oklch(0% 0 0 / 100%);
-    --system-color-light-100: oklch(100% 0 0 / 10%);
-    --system-color-light-200: oklch(100% 0 0 / 50%);
-    --system-color-light-300: oklch(100% 0 0);
-  }
-  
-  *,
-  *::after,
-  *::before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  html {
-    font-size: 16px;
-  }
-  
-  body {
-    overflow: hidden;
-  
-    height: 100dvh;
-    width: 100dvw;
-    background-color: var(--system-color-dark);
-  
-    -moz-image-rendering: auto;
-    -ms-image-rendering: auto;
-    -o-image-rendering: auto;
-    image-rendering: auto;
-  
-    & main {
-      height: 100%;
-      width: 100%;
-  
-      background: url("./assets/stars.webp") 50% 50% / cover;
-  
-      filter: brightness(1.5);
-      -webkit-filter: brightness(1.5);
-  
-      animation: parallax 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
-  
-      & section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-  
-        width: 100%;
-        height: 100%;
-        opacity: 0.5;
-  
-        mix-blend-mode: hard-light;
-  
-        & article {
-          --drop-shadow-blur: 32px;
-          
-          &:nth-of-type(1) {
-            aspect-ratio: 1;
-            inline-size: 300px;
+  /** color system **/
+  --system-color-dark: oklch(0% 0 0 / 100%);
+  --system-color-light-100: oklch(100% 0 0 / 10%);
+  --system-color-light-200: oklch(100% 0 0 / 50%);
+  --system-color-light-300: oklch(100% 0 0);
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  overflow: hidden;
+
+  height: 100dvh;
+  width: 100dvw;
+  background-color: var(--system-color-dark);
+
+  -moz-image-rendering: auto;
+  -ms-image-rendering: auto;
+  -o-image-rendering: auto;
+  image-rendering: auto;
+
+  & main {
+    block-size: inherit;
+    inline-size: inherit;
+
+    background: url("./assets/stars.webp") 50% 50% / cover;
+
+    filter: brightness(1.5);
+    -webkit-filter: brightness(1.5);
+
+    animation: parallax 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
+
+    & section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      inline-size: inherit;
+      block-size: inherit;
+      opacity: 0.5;
+
+      mix-blend-mode: hard-light;
+
+      & article {
+        --drop-shadow-blur: 32px;
+        
+        &:nth-of-type(1) {
+          aspect-ratio: 1;
+          inline-size: 300px;
+          border-radius: 50%;
+
+          background: url("./assets/wire.webp") no-repeat 50% 50% / cover,
+            linear-gradient(135deg,
+              var(--system-color-dark),
+              var(--system-color-light-300));
+
+          -webkit-animation: perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
+          animation: perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
+        }
+
+        &:nth-of-type(2) {
+          position: absolute;
+          z-index: -1;
+
+          aspect-ratio: 1;
+          inline-size: 350px;
+          border-radius: 50%;
+
+          background: var(--system-color-light-300);
+
+          -webkit-filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(30px);
+          filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(30px);
+
+          -webkit-animation: blink 1.5s ease-in-out infinite,
+            perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
+          animation: blink 1.5s ease-in-out infinite,
+            perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
+
+          &::before {
+            position: inherit;
+            inline-size: 450px;
+            aspect-ratio: 9 / 6;
             border-radius: 50%;
-  
-            background: url("./assets/wire.webp") no-repeat 50% 50% / cover,
-              linear-gradient(135deg,
-                var(--system-color-dark),
-                var(--system-color-light-300));
-  
-            -webkit-animation: perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
-            animation: perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
-          }
-  
-          &:nth-of-type(2) {
-            position: absolute;
-            z-index: -1;
-  
-            aspect-ratio: 1;
-            inline-size: 350px;
-            border-radius: 50%;
-  
-            background: var(--system-color-light-300);
-  
+            content: "";
+
+            inset: 10px auto auto -150px;
+
+            background: var(--system-color-light-100);
+            border-top: 20px var(--system-color-light-300) solid;
+
             -webkit-filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(30px);
             filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(30px);
-  
-            -webkit-animation: blink 1.5s ease-in-out infinite,
-              perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
-            animation: blink 1.5s ease-in-out infinite,
-              perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
-  
-            &::before {
-              position: inherit;
-              inline-size: 450px;
-              aspect-ratio: 9 / 6;
-              border-radius: 50%;
-              content: "";
-  
-              inset: 10px auto auto -150px;
-  
-              background: var(--system-color-light-100);
-              border-top: 20px var(--system-color-light-300) solid;
-  
-              -webkit-filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(30px);
-              filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(30px);
-  
-              -webkit-transform: rotate(-20deg);
-              transform: rotate(-20deg);
-  
-              animation: blink 0.5s linear infinite;
-            }
-  
-            &::after {
-              position: inherit;
-              inline-size: 450px;
-              aspect-ratio: 9 / 6;
-              border-radius: 50%;
-              content: "";
-              inset: 85px auto auto -80px;
-  
-              background: var(--system-color-light-100);
-              border-top: 20px var(--system-color-light-300) solid;
-  
-              -webkit-filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(30px);
-              filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(30px);
-  
-              -webkit-transform: rotate(120deg);
-              transform: rotate(120deg);
-  
-              animation: blink 0.5s linear infinite;
-            }
+
+            -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+
+            animation: blink 0.5s linear infinite;
           }
-  
-          &:nth-of-type(3) {
-            position: absolute;
-            z-index: -1;
-  
-            aspect-ratio: 1;
-            inline-size: 250px;
+
+          &::after {
+            position: inherit;
+            inline-size: 450px;
+            aspect-ratio: 9 / 6;
             border-radius: 50%;
-            opacity: 0.5;
-  
+            content: "";
+            inset: 85px auto auto -80px;
+
+            background: var(--system-color-light-100);
+            border-top: 20px var(--system-color-light-300) solid;
+
+            -webkit-filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(30px);
+            filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(30px);
+
+            -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+
+            animation: blink 0.5s linear infinite;
+          }
+        }
+
+        &:nth-of-type(3) {
+          position: absolute;
+          z-index: -1;
+
+          aspect-ratio: 1;
+          inline-size: 250px;
+          border-radius: 50%;
+          opacity: 0.5;
+
+          background: var(--system-color-light-300);
+
+          -webkit-filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(10px);
+          filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(10px);
+
+          -webkit-animation: perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
+          animation: perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
+
+          &::before {
+            position: inherit;
+            content: "";
+
+            aspect-ratio: 15 / 1;
+            inline-size: 1500px;
+            border-radius: 100% 0 0 100%;
+            opacity: 0.9;
+
+            inset: 640px auto auto -1240px;
+            background-color: transparent;
+            background: linear-gradient(135deg,
+                transparent,
+                var(--system-color-light-300));
+
+            -webkit-filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300));
+            filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300));
+
+            -webkit-animation: tail-move 0.8s linear infinite;
+            animation: tail-move 0.8s linear infinite;
+          }
+
+          &::after {
+            position: inherit;
+            aspect-ratio: 2 / 1;
+            inline-size: 400px;
+            border-radius: 100% 0 0 100%;
+            content: "";
+
+            inset: 128px auto auto -160px;
+
             background: var(--system-color-light-300);
-  
+
             -webkit-filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(10px);
             filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(10px);
-  
-            -webkit-animation: perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
-            animation: perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
-  
+
+            -webkit-animation: trail-move 0.05s linear infinite;
+            animation: trail-move 0.05s linear infinite;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+▀▄▀▄▀▄▀▄▀▄▀▄ ANIMATIONS ▀▄▀▄▀▄▀▄▀▄▀▄
+*/
+
+@keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes parallax {
+
+  0%,
+  50%,
+  100% {
+    background-position: top 0 left 0;
+  }
+
+  25% {
+    background-position: top 37.5rem left 18.75rem;
+  }
+
+  75% {
+    background-position: top -37.5rem left -18.75rem;
+  }
+}
+
+@keyframes perspective {
+
+  0%,
+  50%,
+  100% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: scale(0.6) translate3d(-15.625rem, -1.5625rem, 0rem) rotateZ(15deg);
+  }
+
+  75% {
+    transform: scale(0.6) translate3d(15.625rem, 1.5625rem, 0rem) rotateZ(15deg);
+  }
+}
+
+@keyframes tail-move {
+
+  from,
+  to {
+    transform: scaleY(1) rotateZ(-40deg);
+  }
+
+  50% {
+    transform: scaleY(1.5) rotateZ(-29deg);
+  }
+}
+
+@keyframes trail-move {
+
+  0%,
+  50%,
+  100% {
+    transform: scaleY(1) rotateZ(-45deg);
+  }
+
+  25%,
+  75% {
+    transform: scaleY(1.1) rotateZ(-35deg);
+  }
+}
+
+/*** ◰ media queries ***/
+/** smartphone **/
+
+@media screen and (width < 768px) {
+  :root {
+    --drop-shadow-blur: 16px;
+  }
+
+  body {
+    & main {
+      & section {
+        & article {
+          &:nth-of-type(1) {
+            inline-size: calc(300px / 2);
+          }
+
+          &:nth-of-type(2) {
+            inline-size: calc(350px / 2);
+
             &::before {
-              position: inherit;
-              content: "";
-  
-              aspect-ratio: 15 / 1;
-              inline-size: 1500px;
-              border-radius: 100% 0 0 100%;
-              opacity: 0.9;
-  
-              inset: 640px auto auto -1240px;
-              background-color: transparent;
-              background: linear-gradient(135deg,
-                  transparent,
-                  var(--system-color-light-300));
-  
-              -webkit-filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300));
-              filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300));
-  
-              -webkit-animation: tail-move 0.8s linear infinite;
-              animation: tail-move 0.8s linear infinite;
+              inset: calc(10px / 2) auto auto calc(-150px / 2);
+              inline-size: calc(450px / 2);
             }
-  
+
             &::after {
-              position: inherit;
-              aspect-ratio: 2 / 1;
-              inline-size: 400px;
-              border-radius: 100% 0 0 100%;
-              content: "";
-  
-              inset: 128px auto auto -160px;
-  
-              background: var(--system-color-light-300);
-  
-              -webkit-filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(10px);
-              filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(10px);
-  
-              -webkit-animation: trail-move 0.05s linear infinite;
-              animation: trail-move 0.05s linear infinite;
+              inset: calc(85px / 2) auto auto calc(-80px / 2);
+              inline-size: calc(450px / 2);
+            }
+          }
+
+          &:nth-of-type(3) {
+            inline-size: calc(250px / 2);
+
+            &::before {
+              inset: calc(640px / 2) auto auto calc(-1240px / 2);
+              inline-size: calc(1500px / 2);
+            }
+
+            &::after {
+              inset: calc(128px / 2) auto auto calc(-160px / 2);
+              inline-size: calc(400px / 2);
             }
           }
         }
       }
     }
   }
-  
-  /*
-  ▀▄▀▄▀▄▀▄▀▄▀▄ ANIMATIONS ▀▄▀▄▀▄▀▄▀▄▀▄
-  */
-  
-  @keyframes blink {
-    50% {
-      opacity: 0.5;
-    }
-  }
-  
-  @keyframes parallax {
-  
-    0%,
-    50%,
-    100% {
-      background-position: top 0 left 0;
-    }
-  
-    25% {
-      background-position: top 37.5rem left 18.75rem;
-    }
-  
-    75% {
-      background-position: top -37.5rem left -18.75rem;
-    }
-  }
-  
-  @keyframes perspective {
-  
-    0%,
-    50%,
-    100% {
-      transform: scale(1) translate3d(0, 0, 0);
-    }
-  
-    25% {
-      transform: scale(0.6) translate3d(-15.625rem, -1.5625rem, 0rem) rotateZ(15deg);
-    }
-  
-    75% {
-      transform: scale(0.6) translate3d(15.625rem, 1.5625rem, 0rem) rotateZ(15deg);
-    }
-  }
-  
-  @keyframes tail-move {
-  
-    from,
-    to {
-      transform: scaleY(1) rotateZ(-40deg);
-    }
-  
-    50% {
-      transform: scaleY(1.5) rotateZ(-29deg);
-    }
-  }
-  
-  @keyframes trail-move {
-  
-    0%,
-    50%,
-    100% {
-      transform: scaleY(1) rotateZ(-45deg);
-    }
-  
-    25%,
-    75% {
-      transform: scaleY(1.1) rotateZ(-35deg);
-    }
-  }
-  
-  /*** ◰ media queries ***/
-  /** smartphone **/
-  
-  @media screen and (width < 768px) {
-    :root {
-      --drop-shadow-blur: 16px;
-    }
-  
-    body {
-      & main {
-        & section {
-          & article {
-            &:nth-of-type(1) {
-              inline-size: calc(300px / 2);
-            }
-  
-            &:nth-of-type(2) {
-              inline-size: calc(350px / 2);
-  
-              &::before {
-                inset: calc(10px / 2) auto auto calc(-150px / 2);
-                inline-size: calc(450px / 2);
-              }
-  
-              &::after {
-                inset: calc(85px / 2) auto auto calc(-80px / 2);
-                inline-size: calc(450px / 2);
-              }
-            }
-  
-            &:nth-of-type(3) {
-              inline-size: calc(250px / 2);
-  
-              &::before {
-                inset: calc(640px / 2) auto auto calc(-1240px / 2);
-                inline-size: calc(1500px / 2);
-              }
-  
-              &::after {
-                inset: calc(128px / 2) auto auto calc(-160px / 2);
-                inline-size: calc(400px / 2);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+}
