@@ -33,8 +33,8 @@ body {
   image-rendering: auto;
 
   & main {
-    block-size: inherit;
-    inline-size: inherit;
+    block-size: 100%;
+    inline-size: 100%;
 
     background: url("./assets/stars.webp") 50% 50% / cover;
 
@@ -48,8 +48,8 @@ body {
       justify-content: center;
       align-items: center;
 
-      inline-size: inherit;
-      block-size: inherit;
+      inline-size: 100%;
+      block-size: 100%;
       opacity: 0.5;
 
       mix-blend-mode: hard-light;
@@ -90,7 +90,7 @@ body {
             perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
 
           &::before {
-            position: inherit;
+            position: absolute;
             inline-size: 450px;
             aspect-ratio: 9 / 6;
             border-radius: 50%;
@@ -111,7 +111,7 @@ body {
           }
 
           &::after {
-            position: inherit;
+            position: absolute;
             inline-size: 450px;
             aspect-ratio: 9 / 6;
             border-radius: 50%;
@@ -149,7 +149,7 @@ body {
           animation: perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
 
           &::before {
-            position: inherit;
+            position: absolute;
             content: "";
 
             aspect-ratio: 15 / 1;
@@ -171,7 +171,7 @@ body {
           }
 
           &::after {
-            position: inherit;
+            position: absolute;
             aspect-ratio: 2 / 1;
             inline-size: 400px;
             border-radius: 100% 0 0 100%;
