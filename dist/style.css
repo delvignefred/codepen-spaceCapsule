@@ -24,7 +24,7 @@ body {
 
   inline-size: 100dvw;
   block-size: 100dvh;
-  
+
   background-color: var(--system-color-dark);
 
   -moz-image-rendering: auto;
@@ -56,19 +56,23 @@ body {
 
       & article {
         --drop-shadow-blur: 32px;
-        
+
         &:nth-of-type(1) {
           aspect-ratio: 1;
           inline-size: 300px;
           border-radius: 50%;
 
           background: url("./assets/wire.webp") no-repeat 50% 50% / cover,
-            linear-gradient(135deg,
+            linear-gradient(
+              135deg,
               var(--system-color-dark),
-              var(--system-color-light-300));
+              var(--system-color-light-300)
+            );
 
-          -webkit-animation: perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
-          animation: perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
+          -webkit-animation: perspective 30s
+            cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
+          animation: perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98)
+            infinite;
         }
 
         &:nth-of-type(2) {
@@ -81,8 +85,14 @@ body {
 
           background: var(--system-color-light-300);
 
-          -webkit-filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(30px);
-          filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(30px);
+          -webkit-filter: drop-shadow(
+              0px 0px var(--drop-shadow-blur) var(--system-color-light-300)
+            )
+            blur(30px);
+          filter: drop-shadow(
+              0px 0px var(--drop-shadow-blur) var(--system-color-light-300)
+            )
+            blur(30px);
 
           -webkit-animation: blink 1.5s ease-in-out infinite,
             perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
@@ -101,8 +111,14 @@ body {
             background: var(--system-color-light-100);
             border-top: 20px var(--system-color-light-300) solid;
 
-            -webkit-filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(30px);
-            filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(30px);
+            -webkit-filter: drop-shadow(
+                0px 0px var(--drop-shadow-blur) var(--system-color-light-300)
+              )
+              blur(30px);
+            filter: drop-shadow(
+                0px 0px var(--drop-shadow-blur) var(--system-color-light-300)
+              )
+              blur(30px);
 
             -webkit-transform: rotate(-20deg);
             transform: rotate(-20deg);
@@ -121,8 +137,14 @@ body {
             background: var(--system-color-light-100);
             border-top: 20px var(--system-color-light-300) solid;
 
-            -webkit-filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(30px);
-            filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(30px);
+            -webkit-filter: drop-shadow(
+                0px 0px var(--drop-shadow-blur) var(--system-color-light-300)
+              )
+              blur(30px);
+            filter: drop-shadow(
+                0px 0px var(--drop-shadow-blur) var(--system-color-light-300)
+              )
+              blur(30px);
 
             -webkit-transform: rotate(120deg);
             transform: rotate(120deg);
@@ -142,11 +164,19 @@ body {
 
           background: var(--system-color-light-300);
 
-          -webkit-filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(10px);
-          filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(10px);
+          -webkit-filter: drop-shadow(
+              0px 0px var(--drop-shadow-blur) var(--system-color-light-300)
+            )
+            blur(10px);
+          filter: drop-shadow(
+              0px 0px var(--drop-shadow-blur) var(--system-color-light-300)
+            )
+            blur(10px);
 
-          -webkit-animation: perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
-          animation: perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
+          -webkit-animation: perspective 30s
+            cubic-bezier(0.81, 0.01, 0.59, 0.98) infinite;
+          animation: perspective 30s cubic-bezier(0.81, 0.01, 0.59, 0.98)
+            infinite;
 
           &::before {
             position: absolute;
@@ -159,12 +189,18 @@ body {
 
             inset: 640px auto auto -1240px;
             background-color: transparent;
-            background: linear-gradient(135deg,
-                transparent,
-                var(--system-color-light-300));
+            background: linear-gradient(
+              135deg,
+              transparent,
+              var(--system-color-light-300)
+            );
 
-            -webkit-filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300));
-            filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300));
+            -webkit-filter: drop-shadow(
+              0px 0px var(--drop-shadow-blur) var(--system-color-light-300)
+            );
+            filter: drop-shadow(
+              0px 0px var(--drop-shadow-blur) var(--system-color-light-300)
+            );
 
             -webkit-animation: tail-move 0.8s linear infinite;
             animation: tail-move 0.8s linear infinite;
@@ -181,14 +217,45 @@ body {
 
             background: var(--system-color-light-300);
 
-            -webkit-filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(10px);
-            filter: drop-shadow(0px 0px var(--drop-shadow-blur) var(--system-color-light-300)) blur(10px);
+            -webkit-filter: drop-shadow(
+                0px 0px var(--drop-shadow-blur) var(--system-color-light-300)
+              )
+              blur(10px);
+            filter: drop-shadow(
+                0px 0px var(--drop-shadow-blur) var(--system-color-light-300)
+              )
+              blur(10px);
 
             -webkit-animation: trail-move 0.05s linear infinite;
             animation: trail-move 0.05s linear infinite;
           }
         }
       }
+    }
+  }
+  & #logo {
+    inline-size: 8dvmin;
+    aspect-ratio: 1;
+    position: fixed;
+    inset: auto 1.6dvmin 1.6dvmin auto;
+
+    stroke-width: 14;
+    -webkit-fill: none;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    opacity: 0.3;
+
+    transition: opacity cubic-bezier(0, 0, 0, 1);
+
+    & :is(circle, path) {
+      -webkit-stroke: var(--system-color-light-300);
+      stroke: var(--system-color-light-300);
+    }
+
+    &:hover {
+      opacity: 0.9;
     }
   }
 }
@@ -204,7 +271,6 @@ body {
 }
 
 @keyframes parallax {
-
   0%,
   50%,
   100% {
@@ -221,7 +287,6 @@ body {
 }
 
 @keyframes perspective {
-
   0%,
   50%,
   100% {
@@ -229,7 +294,8 @@ body {
   }
 
   25% {
-    transform: scale(0.6) translate3d(-15.625rem, -1.5625rem, 0rem) rotateZ(15deg);
+    transform: scale(0.6) translate3d(-15.625rem, -1.5625rem, 0rem)
+      rotateZ(15deg);
   }
 
   75% {
@@ -238,7 +304,6 @@ body {
 }
 
 @keyframes tail-move {
-
   from,
   to {
     transform: scaleY(1) rotateZ(-40deg);
@@ -250,7 +315,6 @@ body {
 }
 
 @keyframes trail-move {
-
   0%,
   50%,
   100% {
