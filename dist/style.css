@@ -239,7 +239,7 @@ body {
     position: fixed;
     inset: auto 1.6dvmin 1.6dvmin auto;
 
-    stroke-width: 14;
+    stroke-width: 8;
     -webkit-fill: none;
     fill: none;
     stroke-linecap: round;
