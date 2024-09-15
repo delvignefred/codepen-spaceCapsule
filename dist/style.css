@@ -242,8 +242,6 @@ body {
     stroke-width: 8;
     -webkit-fill: none;
     fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
 
     opacity: 0.3;
 
@@ -255,7 +253,7 @@ body {
     }
 
     &:hover {
-      opacity: 0.9;
+      opacity: 0.8;
     }
   }
 }
