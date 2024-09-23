@@ -36,7 +36,7 @@ body {
     block-size: 100%;
     inline-size: 100%;
 
-    background: url("./assets/stars.webp") 50% 50% / cover;
+    background: url("./assets/stars.avif") 50% 50% / cover;
 
     filter: brightness(1.5);
     -webkit-filter: brightness(1.5);
